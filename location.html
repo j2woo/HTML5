@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoLoation</title>
+    <script>
+        //navigator.geolocation.getCurrentPosition
+        //(위치 정보를 가져오는데 성공했을 때 호출되는 함수, 
+        //위치 정보를 가져오는데 실패했을 때 호출되는 함수, 옵션)
+        navigator.geolocation.getCurrentPosition((position)=>{
+            alert("위도: "+position.coords.latitude+", 경도: "+ position.coords.longitude)
+        },(error)=>{
+            alert(error.code);
+        },{
+            maximumAge:5000,
+            enableHighAccuracy: true
+        })
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
